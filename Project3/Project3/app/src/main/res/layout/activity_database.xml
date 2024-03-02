@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+    <!-- Button to set the goal weight -->
+    <Button
+        android:id="@+id/buttonSetGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="0dp"
+        android:text="Add Weight Goal"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_button"
+        android:textColor="#ffffff"
+        android:backgroundTint="@android:color/holo_blue_light" />
+
+    <!-- Entry Button -->
+    <Button
+        android:id="@+id/buttonAddEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="0dp"
+        android:text="Add Entry"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_button"
+        android:textColor="#ffffff"
+        android:backgroundTint="@android:color/holo_blue_light" />
+    </LinearLayout>
+
+    <!-- Buttons for CRUD operations -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <!-- Delete Button -->
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:textColor="#ffffff"
+            android:backgroundTint="@android:color/holo_red_light" />
+
+        <!-- Update Button -->
+        <Button
+            android:id="@+id/buttonUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:textColor="#ffffff"
+            android:backgroundTint="@android:color/holo_orange_light" />
+
+        <!-- Read Button -->
+        <Button
+            android:id="@+id/buttonRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Read"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:textColor="#ffffff"
+            android:backgroundTint="@android:color/holo_green_light" />
+
+    </LinearLayout>
+
+    <!-- GridView for Database Entries -->
+    <GridView
+        android:id="@+id/gridViewDatabase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:horizontalSpacing="8dp"
+        android:verticalSpacing="8dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- List View for Weights -->
+    <ListView
+        android:id="@+id/listViewWeights"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
